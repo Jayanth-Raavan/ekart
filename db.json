@@ -8,6 +8,24 @@
       "password": "Jaanu123",
       "confirmPassword": "Jaanu123",
       "id": 1
+    },
+    {
+      "firstName": "Jhansi",
+      "lastName": "Bhupathi",
+      "mobile": "6300322817",
+      "email": "jhansi@gmail.com",
+      "password": "Jhansi747@",
+      "confirmPassword": "Jhansi747@",
+      "id": 2
+    },
+    {
+      "firstName": "Jhansi",
+      "lastName": "Bhupathi",
+      "mobile": "6300322817",
+      "email": "jhansi@gmail.com",
+      "password": "Jhansi747@",
+      "confirmPassword": "Jhansi747@",
+      "id": 3
     }
   ]
 }
