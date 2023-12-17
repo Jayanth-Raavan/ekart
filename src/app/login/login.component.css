@@ -1,0 +1,24 @@
+.login .m-5 {
+    margin-top: 30px !important;
+}
+
+.login .form-control {
+    padding: 15px !important;
+}
+
+.w-30 {
+    width: 37% !important;
+}
+
+.card-background {
+    background: linear-gradient(to right, #fff, violet, indigo);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+}

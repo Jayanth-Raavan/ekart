@@ -88,11 +88,18 @@
             ],
             "styles": [
               "src/styles.css"
+              
             ],
-            "scripts": []
+            
+            "scripts": [
+            ]
+            
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
