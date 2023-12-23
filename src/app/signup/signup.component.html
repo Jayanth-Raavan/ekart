@@ -6,26 +6,51 @@
                     <h3  class="text-center">SignUp</h3>
                 </div>
                 <div class="form-group m-4">
-                    <input formControlName="firstName"  class="form-control" type="text" placeholder="enter your first name">
+                    <input formControlName="firstName"  class="form-control" type="text" placeholder=" Enter your first name">
+                    <div class="text-danger" *ngIf="signUpForm.controls['firstName'].errors">
+                        <span  *ngIf="signUpForm.controls['firstName'].touched && !signUpForm.controls['firstName'].dirty ">First Name is required.</span>
+                      </div>
                 </div>
                 <div class="form-group m-4">
-                    <input formControlName="lastName"  class="form-control" type="text" placeholder="enter your last name">
+                    <input formControlName="lastName"  class="form-control" type="text" placeholder=" Enter your last name">
+                    <div class="text-danger" *ngIf="signUpForm.controls['lastName'].errors">
+                        <span  *ngIf="signUpForm.controls['lastName'].touched && !signUpForm.controls['lastName'].dirty ">Last Name is required.</span>
+                      </div>
                 </div>
                 <div class="form-group m-4">
-                    <input formControlName="mobile"  class="form-control" type="text" placeholder="enter your mobile number">
+                    <input formControlName="mobile"  class="form-control" type="text" placeholder=" Enter your mobile number">
+                    <div class="text-danger" *ngIf="signUpForm.controls['mobile'].errors">
+                        <span  *ngIf="signUpForm.controls['mobile'].touched && !signUpForm.controls['mobile'].dirty ">Mobile is required.</span>
+                        <span *ngIf="signUpForm.controls['mobile'].invalid && signUpForm.controls['mobile'].dirty ">Mobile valid email.</span>
+                      </div>
                 </div>
                 <div class="form-group m-4">
-                    <input formControlName="email"  class="form-control" type="text" placeholder="enter your email">
+                    <input formControlName="email"  class="form-control" type="text" placeholder=" Enter your email">
+                    <div class="text-danger" *ngIf="signUpForm.controls['email'].errors">
+                        <span  *ngIf="signUpForm.controls['email'].touched && !signUpForm.controls['email'].dirty ">Email is required.</span>
+                        <span *ngIf="signUpForm.controls['email'].invalid && signUpForm.controls['email'].dirty ">Enter valid email.</span>
+                      </div>
                 </div>
                 <div class="form-group m-4">
-                    <input formControlName="password" class="form-control" type="password" placeholder="enter password">
+                    <input formControlName="password" class="form-control" type="password" placeholder=" Enter password">
+                    <div class="text-danger" *ngIf="signUpForm.controls['password'].errors">
+                        <span  *ngIf="signUpForm.controls['password'].touched && !signUpForm.controls['password'].dirty ">Password is required.</span>
+                        <span *ngIf="signUpForm.controls['password'].invalid && signUpForm.controls['password'].dirty ">Enter valid password.</span>
+                      </div>
                 </div>
                 <div class="form-group m-4">
-                    <input formControlName="confirmPassword" class="form-control" type="password" placeholder="enter confirm password">
+                    <input formControlName="confirmPassword" class="form-control" type="password" placeholder=" Enter confirm password">
+                    <!-- <div class="text-danger" *ngIf="signUpForm.controls['confirmPassword'].errors">
+                        <span  *ngIf="signUpForm.controls['confirmPassword'].touched && !signUpForm.controls['confirmPassword'].dirty ">Email is required.</span>
+                      </div> -->
                 </div>
+                <div class="text-danger" *ngIf="signUpForm.controls['password'].errors">
+
+                <span  *ngIf="signUpForm.controls['confirmPassword'].touched && !signUpForm.controls['confirmPassword'].dirty ">Confirm Password is required.</span>
+</div>
                 <div class="form-group m-4" *ngIf="signUpForm.get('confirmPassword').hasError('passwordMismatch') && signUpForm.get('confirmPassword').touched">
                     <span class="text-danger">Passwords do not match.</span>
-                  </div>
+                </div>
                 <div class="form-group m-4">
                     <button class="btn btn-primary form-control" type="submit">SignUp</button>
                 </div>

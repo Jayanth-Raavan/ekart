@@ -35,8 +35,14 @@ export class SignupComponent {
     if(this.signUpForm.valid){
       console.log("Success", this.signUpForm?.value)
       this.auth.signUp(this.signUpForm?.value).subscribe((res:any)=>{
-        console.log("HGHJ",res)
+        console.log("HGHJ",res);
+        if(res){
+          
+        }
       })
+    }
+    else{
+    this.signUpForm.markAllAsTouched()
     }
   }
 }

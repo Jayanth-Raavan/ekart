@@ -7,9 +7,16 @@
                 </div>
                 <div class="form-group m-4">
                     <input formControlName="email"  class="form-control" type="text" placeholder="Enter registered email">
+                    <div class="text-danger" *ngIf="loginForm.controls['email'].errors">
+                        <span  *ngIf="loginForm.controls['email'].touched && !loginForm.controls['email'].dirty ">Email is required.</span>
+                        <span *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].dirty ">Enter valid email.</span>
+                      </div>
                 </div>
                 <div class="form-group m-4">
                     <input formControlName="password" class="form-control" type="password" placeholder="Enter your password">
+                    <div class="text-danger" *ngIf="loginForm.controls['password'].errors">
+                        <span  *ngIf="loginForm.controls['password'].touched && !loginForm.controls['password'].dirty ">password is required.</span>
+                      </div>
                 </div>
                 <div class="form-group m-4">
                     <button class="btn btn-primary form-control" type="submit">Login</button>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../service/auth.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -11,25 +12,38 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   loginForm: FormGroup;
   users : any[]=[];
-  constructor(private fb : FormBuilder,private auth : AuthService, private router: Router ){
+  constructor(private fb : FormBuilder,private auth : AuthService, private router: Router,private toastr: ToastrService ){
     this.loginForm = this.fb.group({
-      email : new FormControl('', [Validators.required]),
+      email : new FormControl('', [Validators.required, Validators.email]),
       password : new FormControl('', [Validators.required]),
     })
   }
 
   onSubmit(){
+
     if(this.loginForm.valid){
       console.log("erfer",this.loginForm?.value)
       this.auth.getUsers().subscribe((res:any)=>{
         this.users = res;
         if(this.users){
           let result = this.findUser(this.loginForm?.value);
+          console.log("objectdata",result)
           if(result){
-            this.router.navigate(['/dashboard'])
+            const resultdata = JSON.stringify(result);
+            localStorage.setItem('userData', resultdata);
+            this.router.navigate(['/'])
+            this.toastr.success('login success');
+
+          }
+          else{
+            this.toastr.error('user does not exists');
+
           }
         }
       })
+    }
+    else{
+      this.loginForm.markAllAsTouched()
     }
   }
   findUser(credentials: { email?: string, mobile?: string, password: string }) {
