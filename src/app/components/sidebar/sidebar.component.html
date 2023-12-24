@@ -1,0 +1,12 @@
+<div class="sidebar-wrapper">
+    <div class="sidebar" [ngStyle]="{'display':showSidebar? 'block':'none'}">
+        <ul class="list-group">
+            <li class="list-group-item" routerLink="/mobiles">Mobiles</li>
+            <li class="list-group-item" routerLink="/laptops">Laptops</li>
+            <li class="list-group-item" routerLink="/clothes">Clothes</li>
+            <li class="list-group-item"routerLink="/shoes">Shoes</li>
+            <li class="list-group-item">Watches</li>
+          </ul>
+    </div>
+    <button class="close-btn" [ngStyle]="{'display':showSidebar? 'block':'none'}" (click)="handleSidebar()"><i class="bi bi-x-circle-fill"></i></button>
+</div>

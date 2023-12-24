@@ -1,0 +1,18 @@
+.sidebar{
+    height: 100vh !important;
+    width: 300px !important;
+    position: absolute !important;
+    background-color: #FFF !important;
+    z-index: 1000;
+    top: -57px;
+}
+.sidebar-wrapper{
+    position: relative;
+    top: 0;
+    /* padding-top: 120px; */
+}
+.close-btn{
+    position: absolute;
+    left: 299px;
+    top: -58px;
+}

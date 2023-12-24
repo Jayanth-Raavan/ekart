@@ -1,0 +1,14 @@
+.card{
+    width: 450px;
+    /* height: 264px; */
+    padding: 0px;
+    background: linear-gradient(to bottom, #fff, #e8e107);
+
+}
+.imageClass{
+    width: 220px;
+    height: 264px;
+}
+.offer-price{
+    background-color: darkslateblue;
+}

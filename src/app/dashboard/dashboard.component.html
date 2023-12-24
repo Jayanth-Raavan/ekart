@@ -1,1 +1,36 @@
-<h1 class="text-center">Welcome to Dashboard</h1>
+<div class="wrapper py-3">
+
+
+  <div class="container-fluid">
+    <h5>Welcome to Dashboard {{userName}}</h5>
+  </div>
+  <div class="carousels">
+    <div #carousel id="carouselExampleControls" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button #indicator *ngFor="let carousel of carousels;let i=index" type="button"
+          data-bs-target="#carouselExampleControls" [attr.data-bs-slide-to]="i" aria-current="true"
+          aria-label="Slide 1"></button>
+      </div>
+      <div class="carousel-inner">
+        <div #item *ngFor="let carousel of carousels" class="carousel-item">
+          <div class="d-block w-100">
+            <img class="w-100" src="{{ carousel.imageUrl }}" />
+          </div>
+        </div>
+      </div>
+      <ng-container *ngIf="{ item: change$ | async } as actual">
+        <button *ngIf="actual.item != 0" class="carousel-control-prev" type="button"
+          data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button *ngIf="carousels.length-1" class="carousel-control-next" type="button"
+          data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </ng-container>
+    </div>
+  </div>
+
+</div>

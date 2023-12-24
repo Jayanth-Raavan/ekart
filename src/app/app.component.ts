@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ecart';
+
+  handleSidebar(event: any) {
+    console.log("jhbhjj", event)
+  }
+  data = "jayanth";
+  fun(abcd:any){
+    this.data=abcd;
+  
+  }
 }
