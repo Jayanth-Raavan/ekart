@@ -17,6 +17,7 @@ import { MobilesComponent } from './pages/mobile/mobiles/mobiles.component';
 import { LaptopsComponent } from './pages/laptop/laptops/laptops.component';
 import { ClothesComponent } from './pages/clothes/clothes/clothes.component';
 import { ShoesComponent } from './pages/footwear/shoes/shoes.component';
+import { WatchesComponent } from './pages/watches/watches.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ShoesComponent } from './pages/footwear/shoes/shoes.component';
     MobilesComponent,
     LaptopsComponent,
     ClothesComponent,
-    ShoesComponent
+    ShoesComponent,
+    WatchesComponent
   ],
   imports: [
     BrowserModule,

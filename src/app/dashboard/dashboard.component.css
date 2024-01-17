@@ -1,0 +1,29 @@
+.background-image {
+  width: 100%;
+
+  /* background-size: cover;
+  background-position: inherit; */
+  transition: background-image 0.5s ease-in-out;
+  padding: 25px;
+  background-repeat: no-repeat;
+  background-position: initial;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100%;
+}
+@media screen and (max-width: 576px) {
+  .background-image {
+    height: 120px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .background-image {
+    height: 365px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .background-image {
+    height: 675px;
+  }
+}

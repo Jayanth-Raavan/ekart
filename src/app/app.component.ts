@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
+import { DataService } from './service/data.service';
 
 @Component({
   selector: 'app-root',
@@ -6,14 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ecart';
-
-  handleSidebar(event: any) {
-    console.log("jhbhjj", event)
+  userData = {};
+  constructor(private cdr: ChangeDetectorRef) {
   }
-  data = "jayanth";
-  fun(abcd:any){
-    this.data=abcd;
-  
+  ngOnInit() {
+    this.cdr.detectChanges();
   }
 }

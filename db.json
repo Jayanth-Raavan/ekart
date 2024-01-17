@@ -1,34 +1,50 @@
 {
   "users": [
     {
-      "firstName": "Jaanu",
-      "lastName": "Jayanth",
+      "firstName": "Jayanth",
+      "lastName": "Raavan",
       "mobile": "1234567890",
       "email": "jayanthraavan@gmail.com",
-      "password": "Jaanu123",
-      "confirmPassword": "Jaanu123",
+      "password": "Jayanth123",
+      "confirmPassword": "Jayanth123",
       "id": 1
-    },
-    {
-      "firstName": "Jhansi",
-      "lastName": "Bhupathi",
-      "mobile": "6300322817",
-      "email": "jhansi@gmail.com",
-      "password": "Jhansi747@",
-      "confirmPassword": "Jhansi747@",
-      "id": 2
-    },
-    {
-      "firstName": "Jhansi",
-      "lastName": "Bhupathi",
-      "mobile": "6300322817",
-      "email": "jhansi@gmail.com",
-      "password": "Jhansi747@",
-      "confirmPassword": "Jhansi747@",
-      "id": 3
     }
   ],
-  "mobiles":[
-    
-  ]
+  "electronics": {
+    "mobiles": [],
+    "laptops": [],
+    "earphones_headphones": [],
+    "Tvs": [],
+    "Acs": [],
+    "refridgerators": []
+  },
+  "clothes": {
+    "t_shirts": [],
+    "hoodies": [],
+    "shirts": {
+      "collar": [],
+      "half_sleeve": [],
+      "full_sleeve": [],
+      "mandarin_collar": [],
+      "jeanes": [],
+      "formal": []
+    },
+    "pants": {
+      "jeans": [],
+      "formal": [],
+      "night_pants": [],
+      "shorts": []
+    }
+  },
+  "shoes": {
+    "formal": [],
+    "casual": [],
+    "brands": []
+  },
+  "watches": {
+    "fastrack": [],
+    "titan": [],
+    "fossil": [],
+    "sonata": []
+  }
 }

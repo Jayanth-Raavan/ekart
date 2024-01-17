@@ -6,16 +6,19 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-@Input() disaplaySidebar:boolean=false;
-@Output() sidebar = new EventEmitter<boolean>();
-data = false;
-  handlemenu(){
-    this.data=true;
-
+  @Input() disaplaySidebar: boolean = false;
+  @Output() sidebar = new EventEmitter<boolean>();
+  userData = {};
+  data = false;
+  constructor() {
   }
-  handleSidebar(event:any){
-    this.data=event;
-    console.log("WERTY",event)
+  ngOnInit() {
+    this.userData = JSON.parse(localStorage.getItem('userData'));
   }
-
+  handlemenu() {
+    this.data = true;
+  }
+  handleSidebar(event: any) {
+    this.data = event;
+  }
 }

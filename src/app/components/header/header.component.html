@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-xxxl navbar-dark bg-dark">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button"(click)="handlemenu()">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">EKART</a>
-    </div>
-  </nav>
-  <app-sidebar [showSidebar]="data" (sidebarEvent)="handleSidebar($event)"></app-sidebar>
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" (click)="handlemenu()" *ngIf="userData">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">EKART</a>
+  </div>
+</nav>
+<app-sidebar [showSidebar]="data" (sidebarEvent)="handleSidebar($event)"></app-sidebar>

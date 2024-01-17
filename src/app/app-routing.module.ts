@@ -9,17 +9,18 @@ import { MobilesComponent } from './pages/mobile/mobiles/mobiles.component';
 import { LaptopsComponent } from './pages/laptop/laptops/laptops.component';
 import { ShoesComponent } from './pages/footwear/shoes/shoes.component';
 import { ClothesComponent } from './pages/clothes/clothes/clothes.component';
+import { WatchesComponent } from './pages/watches/watches.component';
 
 const routes: Routes = [
-
-  {path:'', component:DashboardComponent,canActivate: [authGuard]},
-  {path:'signup', component:SignupComponent},
-  {path:'login',component:LoginComponent },
-  {path:'home', component:HomeComponent},
-  {path:'mobiles',component:MobilesComponent},
-  {path:'laptops',component:LaptopsComponent},
-  {path:'shoes',component:ShoesComponent},
-  {path:'clothes',component:ClothesComponent}
+  { path: '', component: DashboardComponent, canActivate: [authGuard] },
+  { path: 'home', component: HomeComponent, canActivate: [authGuard] },
+  { path: 'mobiles', component: MobilesComponent, canActivate: [authGuard] },
+  { path: 'laptops', component: LaptopsComponent, canActivate: [authGuard] },
+  { path: 'shoes', component: ShoesComponent, canActivate: [authGuard] },
+  { path: 'clothes', component: ClothesComponent, canActivate: [authGuard] },
+  { path: 'watches', component: WatchesComponent, canActivate: [authGuard] },
+  { path: 'signup', component: SignupComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({
