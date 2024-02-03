@@ -1,14 +1,23 @@
-.card{
-    width: 450px;
-    /* height: 264px; */
-    padding: 0px;
-    background: linear-gradient(to bottom, #fff, #e8e107);
-
+/* .card {
+  width: 450px;
+  height: 264px;
+  padding: 0px;
+  background: linear-gradient(to bottom, #fff, #e8e107);
 }
-.imageClass{
-    width: 220px;
-    height: 264px;
+.imageClass {
+  width: 220px;
+  height: 264px;
+}*/
+.offer-price {
+  background-color: darkslateblue;
 }
-.offer-price{
-    background-color: darkslateblue;
+img {
+  width: 100%;
+  height: auto;
+}
+.fs-xxsm {
+  font-size: xx-small;
+}
+.features {
+  font-size: 14px;
 }

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MobileService } from 'src/app/service/mobile.service';
 
 @Component({
   selector: 'app-mobiles',
@@ -6,29 +8,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./mobiles.component.css']
 })
 export class MobilesComponent {
-  // MOBILES_DATA = [
-  //   { 
-  //     "Sno": 1, 
-  //     "MobileName": "Realme", 
-  //     "Model": "narzo20", 
-  //     "Price": 15000, 
-  //     "ImageUrl": "@mdo", 
-  //   },
-  //   { 
-  //     "Sno": 1, 
-  //     "MobileName": "Realme", 
-  //     "Model": "narzo20", 
-  //     "Price": 15000, 
-  //     "ImageUrl": "@mdo", 
-  //   },
-  //   { 
-  //     "Sno": 1, 
-  //     "MobileName": "Realme", 
-  //     "Model": "narzo20", 
-  //     "Price": 15000, 
-  //     "ImageUrl": "@mdo", 
-  //   },
-  // ];
-
-  
+  mobileForm: FormGroup;
+  constructor(private fb: FormBuilder, private mobs: MobileService) {
+    this.mobileForm = this.fb.group({
+      mobileName: new FormControl("", [Validators.required]),
+      model: new FormControl("", [Validators.required]),
+      price: new FormControl("", [Validators.required]),
+      effectivePrice: new FormControl("", [Validators.required]),
+      features: new FormControl("", [Validators.required]),
+      imgURL: new FormControl("", [Validators.required]),
+    });
+  }
+  onSubmit() {
+    if (this.mobileForm?.valid) {
+      this.mobs.AddMobile(this.mobileForm?.value).subscribe((res: any) => {
+        console.log(`MOBILE`, res);
+      })
+    } else {
+      this.mobileForm.markAllAsTouched();
+    }
+  }
 }

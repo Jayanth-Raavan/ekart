@@ -6,11 +6,22 @@ import { Injectable } from '@angular/core';
 })
 
 export class MobileService {
-url="http://localhost:3000/mobiles";
+  url = "http://localhost:3000/electronics/mobiles";
   constructor(private http: HttpClient) { }
 
-  getAllMobiles(){
+  GetAllMobiles() {
     return this.http.get(this.url);
   }
-
+  GetMobileById(id: number) {
+    return this.http.get(this.url + `/${id}`);
+  }
+  AddMobile(payload: any) {
+    return this.http.post(this.url, payload);
+  }
+  UpdateMobile(payload: any) {
+    return this.http.get(this.url + `/${payload?.id}`, payload);
+  }
+  DeleteMobile(id: number) {
+    return this.http.get(this.url + `/${id}`);
+  }
 }

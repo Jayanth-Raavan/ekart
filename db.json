@@ -10,8 +10,19 @@
       "id": 1
     }
   ],
+
   "electronics": {
-    "mobiles": [],
+    "mobiles": [
+      {
+        "mobileName": "Redmi",
+        "model": "Note 7 pro",
+        "price": "15999",
+        "effectivePrice": "14999",
+        "features": "dscsd",
+        "imgURL": "ccsc",
+        "id": 1
+      }
+    ],
     "laptops": [],
     "earphones_headphones": [],
     "Tvs": [],

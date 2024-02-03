@@ -1,45 +1,131 @@
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Add Mobile
-  </button>
-<div class="card">
-    <div class="card-body">
-      <div class="row">
-        <div class="col p-0">
-            <h5 class="card-title">Mobile Name</h5>
-            <p class="card-text">$ 45</p>
-            <div class="offer-price p-2">
-                <h5 class="text-white">Effective Price</h5>
-                <h4 class="text-white">45678</h4>
+<div class="mobiles">
+  <div class="container">
+    <div class="row justify-content-between my-3">
+      <div class="col-sm-12 col-md-6"></div>
+      <div class="col-sm-12 col-md-6 text-end">
+        <button type="button" class="btn btn-primary rounded-0" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Add Mobile
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-3 my-2">
+        <div class="card">
+          <div class="card-body">
+            <div class="row align-items-center">
+              <h6 class="card-title m-0">Oneplus Nord CE3</h6>
+              <div class="col-sm-6 col-md-6">
+                <p class="card-text m-0">$ 45</p>
+                <div class="offer-price p-2">
+                  <h6 class="text-white m-0">Effective Price</h6>
+                  <h5 class="text-white m-0">45678 *</h5>
+                </div>
+                <span class="fs-xxsm">*including Bank offers</span>
+                <p class="m-0 features">
+                  SD8 Gen 2b Mobile platform 5000 mAh with 100W SUPERVOOC
+                </p>
+              </div>
+              <div class="col-sm-6 col-md-6">
+                <figure class="text-center">
+                  <img src="../../../../assets/Images/oneplus.jpg" alt="" class="imageClass" />
+                </figure>
+              </div>
             </div>
-            <span>*including Bank offers</span>
-            <p>
-                SD8 Gen 2b Mobile platform 5000 mAh with 100W SUPERVOOC
-            </p>
-        </div>
-        <div class="col p-0">
-            <img src="../../../../assets/Images/oneplus.jpg" alt="" class="imageClass">
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Button trigger modal -->
+</div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="" method="post" [formGroup]="mobileForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="mb-3">
+                <label for="" class="form-label">Mobile Name</label>
+                <input type="text" class="form-control" placeholder="" formControlName="mobileName" />
+                <div>
+                  <span class="text-danger"
+                    *ngIf="mobileForm?.controls?.['mobileName']?.invalid && mobileForm?.controls?.['mobileName']?.touched">Mobile
+                    name is required</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="mb-3">
+                <label for="" class="form-label">Model</label>
+                <input type="text" class="form-control" placeholder="" formControlName="model" />
+                <div class="">
+                  <span class="text-danger"
+                    *ngIf="mobileForm?.controls?.['model']?.invalid && mobileForm?.controls?.['model']?.touched">Mobile
+                    model is required</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="mb-3">
+                <label for="" class="form-label">Price</label>
+                <input type="text" class="form-control" placeholder="" formControlName="price" />
+                <div class="">
+                  <span class="text-danger"
+                    *ngIf="mobileForm?.controls?.['price']?.invalid && mobileForm?.controls?.['price']?.touched">Mobile
+                    price is required</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="mb-3">
+                <label for="" class="form-label">Effective Price</label>
+                <input type="text" class="form-control" placeholder="" formControlName="effectivePrice" />
+                <div class="">
+                  <span class="text-danger"
+                    *ngIf="mobileForm?.controls?.['effectivePrice']?.invalid && mobileForm?.controls?.['effectivePrice']?.touched">Mobile
+                    effective price is required</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="mb-3">
+                <label for="" class="form-label">Features</label>
+                <input type="text" class="form-control" placeholder="" formControlName="features" />
+                <div class="">
+                  <span class="text-danger"
+                    *ngIf="mobileForm?.controls?.['features']?.invalid && mobileForm?.controls?.['features']?.touched">Mobile
+                    features is required</span>
+                </div>
+              </div>
+            </div>
 
-  
-  <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
-        </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="mb-3">
+                <label for="" class="form-label">Image URL</label>
+                <input type="text" class="form-control" placeholder="" formControlName="imgURL" />
+                <div class="">
+                  <span class="text-danger"
+                    *ngIf="mobileForm?.controls?.['imgURL']?.invalid && mobileForm?.controls?.['imgURL']?.touched">Mobile
+                    Image URL
+                    is required</span>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <button class="btn btn-primary form-control my-2" type="submit">Save</button>
+              <button class="btn btn-outline-secondary form-control my-2" type="reset">Reset</button>
+
+            </div>
+          </div>
+        </form>
       </div>
+      <div class="modal-footer"></div>
     </div>
   </div>
+</div>
