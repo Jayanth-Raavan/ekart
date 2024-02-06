@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-3 my-2">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="card-title m-0">{{mobileData?.mobileName}}</h6>
+                        <i class="bi bi-pen-fill" (click)="onEdit(mobileData)"></i>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-sm-6 col-md-6">
+                            <p class="card-text m-0 text-decoration-line-through">${{mobileData?.price}}</p>
+                            <div class="offer-price p-2">
+                                <h6 class="text-white m-0">Effective Price</h6>
+                                <h5 class="text-white m-0">{{mobileData?.effectivePrice}} *</h5>
+                            </div>
+                            <span class="fs-xxsm">*including Bank offers</span>
+                            <p class="m-0 features">
+                                {{mobileData?.features}}
+                            </p>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <figure class="text-center w-100 h-100">
+                                <img [src]="mobileData?.imgURL" alt="" class="imageClass w-100 h-100" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

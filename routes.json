@@ -1,8 +1,6 @@
 {
-  "/electronics/mobiles": "/mobiles",
-  "/electronics/laptops": "/laptops",
-  "/electronics/earphones_headphones": "/earphones_headphones",
-  "/electronics/Tvs": "/Tvs",
-  "/electronics/Acs": "/Acs",
-  "/electronics/refridgerators": "/refridgerators"
+  "/api/electronics/mobiles": "/mobiles",
+  "/api/electronics/mobiles/:id": "/mobiles/:id",
+  "/api/electronics/laptops": "/laptops",
+  "/api/electronics/laptops/:id": "/laptops/:id"
 }

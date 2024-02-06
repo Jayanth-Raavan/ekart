@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 
 export class MobileService {
-  url = "http://localhost:3000/electronics/mobiles";
+  url = "http://localhost:3000/api/electronics/mobiles";
   constructor(private http: HttpClient) { }
 
   GetAllMobiles() {

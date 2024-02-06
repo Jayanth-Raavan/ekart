@@ -32,7 +32,7 @@ import { WatchesComponent } from './pages/watches/watches.component';
     LaptopsComponent,
     ClothesComponent,
     ShoesComponent,
-    WatchesComponent
+    WatchesComponent,
   ],
   imports: [
     BrowserModule,

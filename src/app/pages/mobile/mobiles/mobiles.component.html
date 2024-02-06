@@ -3,31 +3,31 @@
     <div class="row justify-content-between my-3">
       <div class="col-sm-12 col-md-6"></div>
       <div class="col-sm-12 col-md-6 text-end">
-        <button type="button" class="btn btn-primary rounded-0" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <button type="button" class="btn btn-primary rounded-0" (click)="openModal()">
           Add Mobile
         </button>
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-12 col-md-6 col-lg-3 my-2">
-        <div class="card">
+      <div class="col-sm-12 col-md-6 col-lg-3 my-2" *ngFor="let mob of Mobiles">
+        <div class="card h-100" (click)="GetMobileById(mob?.id)">
           <div class="card-body">
+            <h6 class="card-title m-0">{{mob?.mobileName}}</h6>
             <div class="row align-items-center">
-              <h6 class="card-title m-0">Oneplus Nord CE3</h6>
               <div class="col-sm-6 col-md-6">
-                <p class="card-text m-0">$ 45</p>
+                <p class="card-text m-0 text-decoration-line-through">${{mob?.price}}</p>
                 <div class="offer-price p-2">
                   <h6 class="text-white m-0">Effective Price</h6>
-                  <h5 class="text-white m-0">45678 *</h5>
+                  <h5 class="text-white m-0">{{mob?.effectivePrice}} *</h5>
                 </div>
                 <span class="fs-xxsm">*including Bank offers</span>
                 <p class="m-0 features">
-                  SD8 Gen 2b Mobile platform 5000 mAh with 100W SUPERVOOC
+                  {{mob?.features}}
                 </p>
               </div>
               <div class="col-sm-6 col-md-6">
-                <figure class="text-center">
-                  <img src="../../../../assets/Images/oneplus.jpg" alt="" class="imageClass" />
+                <figure class="text-center w-100 h-100">
+                  <img [src]="mob?.imgURL" alt="" class="imageClass w-100 h-100" />
                 </figure>
               </div>
             </div>

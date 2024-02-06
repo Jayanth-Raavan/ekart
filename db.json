@@ -10,52 +10,58 @@
       "id": 1
     }
   ],
-
-  "electronics": {
-    "mobiles": [
-      {
-        "mobileName": "Redmi",
-        "model": "Note 7 pro",
-        "price": "15999",
-        "effectivePrice": "14999",
-        "features": "dscsd",
-        "imgURL": "ccsc",
-        "id": 1
-      }
-    ],
-    "laptops": [],
-    "earphones_headphones": [],
-    "Tvs": [],
-    "Acs": [],
-    "refridgerators": []
-  },
-  "clothes": {
-    "t_shirts": [],
-    "hoodies": [],
-    "shirts": {
-      "collar": [],
-      "half_sleeve": [],
-      "full_sleeve": [],
-      "mandarin_collar": [],
-      "jeanes": [],
-      "formal": []
+  "mobiles": [
+    {
+      "mobileName": "Redmi",
+      "model": "Note 7 pro",
+      "price": "15999",
+      "effectivePrice": "14999",
+      "features": "SD8 Gen 2b Mobile platform 5000 mAh with 100W SUPERVOOC",
+      "imgURL": "https://m.media-amazon.com/images/I/6175SlKKECL._SX679_.jpg",
+      "id": 1
     },
-    "pants": {
-      "jeans": [],
-      "formal": [],
-      "night_pants": [],
-      "shorts": []
+    {
+      "mobileName": "Redmi",
+      "model": "12 5G",
+      "price": "15999",
+      "effectivePrice": "13499",
+      "features": "Snapdragon 4 Gen 2",
+      "imgURL": "https://m.media-amazon.com/images/I/71tCOhEigtL._SL1500_.jpg",
+      "id": 2
     }
-  },
-  "shoes": {
-    "formal": [],
-    "casual": [],
-    "brands": []
-  },
-  "watches": {
-    "fastrack": [],
-    "titan": [],
-    "fossil": [],
-    "sonata": []
-  }
+  ],
+  "laptops": [
+    {
+      "laptopName": "Redmi",
+      "model": "Note 7 pro",
+      "price": "15999",
+      "effectivePrice": "14999",
+      "features": "dscsd",
+      "imgURL": "ccsc",
+      "id": 1
+    }
+  ],
+  "earphones_headphones": [],
+  "Tvs": [],
+  "Acs": [],
+  "refridgerators": [],
+  "t_shirts": [],
+  "hoodies": [],
+  "collar": [],
+  "half_sleeve": [],
+  "full_sleeve": [],
+  "mandarin_collar": [],
+  "jeans_shirts": [],
+  "formal_shirts": [],
+  "jeans_pants": [],
+  "formal_pants": [],
+  "night_pants": [],
+  "shorts": [],
+  "formal": [],
+  "casual": [],
+  "brands": [],
+  "fastrack": [],
+  "titan": [],
+  "fossil": [],
+  "sonata": []
 }

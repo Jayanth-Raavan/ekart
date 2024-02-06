@@ -10,11 +10,13 @@ import { LaptopsComponent } from './pages/laptop/laptops/laptops.component';
 import { ShoesComponent } from './pages/footwear/shoes/shoes.component';
 import { ClothesComponent } from './pages/clothes/clothes/clothes.component';
 import { WatchesComponent } from './pages/watches/watches.component';
+import { MobileComponent } from './pages/mobile/mobile/mobile.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent, canActivate: [authGuard] },
   { path: 'home', component: HomeComponent, canActivate: [authGuard] },
   { path: 'mobiles', component: MobilesComponent, canActivate: [authGuard] },
+  { path: `mobile/:id`, component: MobileComponent, canActivate: [authGuard] },
   { path: 'laptops', component: LaptopsComponent, canActivate: [authGuard] },
   { path: 'shoes', component: ShoesComponent, canActivate: [authGuard] },
   { path: 'clothes', component: ClothesComponent, canActivate: [authGuard] },
